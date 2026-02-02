@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-warm-white: #fff0f3;
+  --color-love-red: #ff4d6d;
+  --color-love-pink: #ff8fa3;
+  --color-love-text: #590d22;
+
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-heartbeat: heartbeat 1.5s ease-in-out infinite;
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @keyframes heartbeat {
+
+    0%,
+    100% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.1);
+    }
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-white/30 backdrop-blur-md border border-white/50 shadow-lg;
+  }
+}
+
+body {
+  background: linear-gradient(135deg, #fff0f3 0%, #ffe3e3 100%);
+  color: var(--color-love-text);
+  font-family: var(--font-sans);
+}
