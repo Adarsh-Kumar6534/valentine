@@ -6,7 +6,7 @@ import { useMemo, useRef } from "react";
 import * as THREE from "three";
 
 function HeartParticles() {
-    const ref = useRef<any>();
+    const ref = useRef<THREE.Points>(null);
 
     const positions = useMemo(() => {
         const count = 3000;
